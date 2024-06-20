@@ -1,0 +1,75 @@
+/* HEADER CSS */
+header.cabecalho {
+    background-color: #FFFFFF;
+    padding: 0.8rem 5%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    position: relative;
+}
+
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem ;
+}
+
+.container__botao{
+    display: none;
+}
+
+.cabecalho__menu-hamburguer{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/Menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.cabecalho__logo{
+    width: 2rem;
+}
+
+.lista-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 60vw;
+}
+
+.container__botao:checked ~ .lista-menu{
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item{
+    padding: 1em;
+    background-color: #FFFFFF;
+}
+
+.lista-menu__titulo, 
+.lista-menu__item{
+    padding: 1em;
+    background-color: #FFFFFF;
+}
+
+.lista-menu__titulo > a{
+    color: var(--color-orange);
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.lista-menu__link{
+    background: var(--blue-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
