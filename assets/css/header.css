@@ -1,7 +1,7 @@
 /* HEADER CSS */
-header.cabecalho {
+.cabecalho {
     background-color: #FFFFFF;
-    padding: 0.8rem 5%;
+    padding: 0.8rem 5% .8rem 0;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -10,11 +10,23 @@ header.cabecalho {
     position: relative;
 }
 
+.container__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburguer{
+    background-image: url("../images/MenuAberto.svg");
+}
+
+.container__botao:checked ~ .container__rotulo{
+    background: var(--blue-gradient);
+}
+
 .container{
     display:flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem ;
+}
+
+.container__texto{
+    display: none;
 }
 
 .container__botao{
@@ -72,4 +84,111 @@ header.cabecalho {
     background-clip: text;
     text-transform: uppercase;
     font-size: 0.8rem;
+}
+
+.container__titulo, .opcoes{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+
+    .cabecalho{
+        padding: .8rem 5% .8rem 6%;
+    }
+
+    .opcoes{
+        display: flex;
+        align-items: center;
+    }
+
+    .container__texto{
+        display: none;
+    }
+
+    .opcoes__botao:checked ~ .opcoes__rotulo > .opcoes__item{
+        background: var(--blue-gradient);
+        color: var(--color-white);
+    }
+
+    .opcoes__item {
+        padding: 2em 1em;
+    }
+
+    .container__titulo, .container__titulo--negrito{
+        font-family: var(--fonts-josefin);
+        font-size: 2.25rem;
+    }
+
+    .container__titulo{
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
+
+    .opcoes__item{
+        text-transform: uppercase;
+        color: var(--color-black80);
+        margin-inline: 1rem;
+        padding-right: 1.5em;
+
+    }
+
+    .cabecalho__favoritos, .cabecalho__menu-hamburguer{
+        display: none;
+    }
+
+    .header_options{
+        gap: 2rem
+    }
+
+    .opcoes__botao:checked ~ .lista-menu{
+        display: block;
+        width: auto;
+    }
+
+    .opcoes__botao{
+        display: none;
+    }
+
+    .lista-menu{
+        left: auto;
+        margin-left: 1em;
+    }
+
+    .lista-menu__item{
+        padding: 1em 2em;
+    }
+
+    .lista-menu__item:hover{
+        background: var(--blue-gradient);
+    }
+
+    .lista-menu__item:hover > a{
+        -webkit-text-fill-color: var(--blue-gradient);
+        color: var(--color-white);
+        transition: 1s;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1360px){
+
+    .cabecalho__favoritos{
+        display: none;
+    }
+
+    .container__links{
+        display: flex;
+        align-items: center;
+        gap: .5em
+    }
+
+    .opcoes{
+        margin-right: auto;
+    }
 }

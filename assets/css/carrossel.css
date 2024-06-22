@@ -91,3 +91,57 @@
 .star_autoria i{
     color: var(--color-orange);
 }
+
+@media screen and (min-width: 1024px){
+    .carrossel__titulo{
+        font-size: 26px;
+    }
+
+    .swiper{
+        width: 80%;
+        margin-bottom: 2em;
+    }
+
+    .swiper-wrapper{
+        padding-left: 0;
+        width: 60%!important;
+    }
+
+    .swiper-pagination{
+        margin: 2em 0 3em 0;
+        padding-block: 2rem;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next{
+        display: block!important;
+        top: 60%;
+    }
+
+    .card{
+        width: 60%;
+        margin: 2em auto;
+    }
+}
+
+@media screen and (min-width: 1360px){
+
+    .carrossel__titulo{
+        padding-block: 2rem 1rem;
+    }
+
+    .container__carrossel{
+        display: flex;
+        gap: 2em;
+        margin:  0 10vw 3em 10vw;
+    }
+
+    .swiper-pagination{
+        margin: 1em 0;
+    }
+
+    .swiper{
+        width: 50%;
+    }
+
+}

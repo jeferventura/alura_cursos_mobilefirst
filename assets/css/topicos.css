@@ -29,3 +29,28 @@
     font-weight: 700;
     border-radius: 5px;
 }
+
+@media screen and (min-width: 1024px){
+    .topicos__titulo{
+        font-size: 24px;
+    }
+
+    .topicos__item a{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1360px){
+    .topicos{
+        padding: 3em 0;
+    }
+
+    .topicos__titulo{
+        font-size: 2rem;
+    }
+
+    .topicos__lista{
+        width: 50vw;
+        margin: 0 auto;
+    }
+}
